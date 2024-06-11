@@ -20,5 +20,8 @@ Route::post('/logout', [AuthController::class, 'logout']);
 // Admin Route
 Route::middleware(['auth', 'admin', 'revalidate'])->prefix('admin')->group(function () {
     Route::get('/dashboard',[AdminCT::class, 'index']);
+    Route::get('/pesertas',[AdminCT::class, 'peserta']);
+    Route::get('/pesertas/tambah-data', [AdminCT::class, 'tambahData']);
+    Route::post('/pesertas/tambah-data/store', [AdminCT::class, 'tambahDataStore']);
 });
 // End Admin route

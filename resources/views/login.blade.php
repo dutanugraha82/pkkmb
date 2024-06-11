@@ -37,7 +37,7 @@
                  <hr class="my-5">
                   <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Masuk</button>
                   <div class="d-flex align-items-center justify-content-center">
-                    <p class="fs-4 mb-0 fw-bold text-danger">Silahkan hubungi panitia jika tidak bisa masuk.</p>
+                    <p class="fs-4 mb-0 fw-bold text-danger">System is under development</p>
                   </div>
                 </form>
               </div>

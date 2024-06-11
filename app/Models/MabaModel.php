@@ -9,6 +9,6 @@ class MabaModel extends Model
 {
     use HasFactory;
 
-//    protected $table = 'data';
+   protected $table = 'data';
 
 }
