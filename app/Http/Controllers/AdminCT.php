@@ -3,15 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\MabaModel;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\DataTables;
 
 class AdminCT extends Controller
 {
     public function index(){
-        return view('admin.content.dashboard');
+        $tahun = Carbon::now()->format('Y');
+        $totalData = DB::table('data')->count();
+        $dataTahun = DB::table('data')->where('tahun', $tahun)->count();
+        return view('admin.content.dashboard', compact('tahun', 'totalData', 'dataTahun'));
     }
 
-    public function peserta(){
+    public function peserta(Request $request){
+        $data = MabaModel::orderBy('created_at', 'DESC');
+        if ($request->ajax()) {
+            return DataTables::of($data)
+                    ->addIndexColumn()
+                    ->make(true);
+        }
         return view('admin.content.peserta.index');
     }
     
@@ -33,6 +45,7 @@ class AdminCT extends Controller
             'nama_prodi' => $request->prodi,
             'tahun' => $request->angkatan,
             'nomor' => $request->nim,
+            'created_at' => Carbon::now(),
         ]);
 
         return redirect('/admin/pesertas');

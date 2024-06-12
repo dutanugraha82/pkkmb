@@ -14,7 +14,7 @@
       <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
         <ul id="sidebarnav">
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./index.html" aria-expanded="false">
+            <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
               <span>
                 <i class="ti ti-layout-dashboard"></i>
               </span>
