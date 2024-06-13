@@ -21,7 +21,7 @@
           <input type="number" class="form-control" name="angkatan" id="angkatan">
         </div>
         <div class="mb-3">
-          <label for="nim" class="form-label">NIM</label>
+          <label for="nim" class="form-label">Nomor PMB</label>
           <input type="number" class="form-control" name="nim" id="nim">
         </div>
         <div class="d-flex justify-content-right mt-4">

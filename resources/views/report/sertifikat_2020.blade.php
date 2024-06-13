@@ -17,7 +17,7 @@
   }
 }
 body {
-    background-image: {{ asset('assets/pkkmb_'.$data->tahun.'.png') }}
+    background-image: url('../public/assets/pkkmb_2020.png');
     background-size:   cover;                      /* <------ */
     background-repeat: no-repeat;
     background-position: center center;            /* optionally, center the image */

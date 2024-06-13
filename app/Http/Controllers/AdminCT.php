@@ -26,6 +26,21 @@ class AdminCT extends Controller
         }
         return view('admin.content.peserta.index');
     }
+
+    public function peserta2018(Request $request){
+        $data = MabaModel::where('created_at', 'LIKE', '2018%');
+        if ($request->ajax()) {
+            return DataTables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('tahun', function($data){
+                        return '2018';
+                    })
+                    ->rawColumns(['tahun'])
+                    ->make(true);
+        }
+        return view('admin.content.peserta.data2018');
+        
+    }
     
     public function tambahData(){
         return view('admin.content.peserta.create');

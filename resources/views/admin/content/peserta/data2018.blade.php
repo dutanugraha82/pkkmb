@@ -1,10 +1,8 @@
 @extends('admin.master')
 @section('content')
 <div class="card w-100">
-    <div class="card-header">
-        <div class="d-flex" style="justify-content: space-between">
-          <a href="/admin/pesertas/tambah-data" class="btn btn-primary">Tambah Data <sup>+</sup></a>
-          <a href="/admin/pesertas/2018" class="btn btn-warning">Data 2018</a>
+    <div class="card-header bg-primary p4">
+          <h5 class="text-white"> Data 2018</h5>
         </div>
     </div>
     <div class="card-body p-4">
@@ -38,7 +36,7 @@
     var table = $('#table_peserta').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "/admin/pesertas",
+        ajax: "/admin/pesertas/2018",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
             {data: 'nama_lengkap', name: 'nama_lengkap'},

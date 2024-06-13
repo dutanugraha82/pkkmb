@@ -35,7 +35,8 @@
                     <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
                   </div>
                  <hr class="my-5">
-                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Masuk</button>
+                 <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Masuk</button>
+                 <a href="/data-pkkmb/2018" class="btn btn-warning w-100 py-8 fs-4 mb-3 rounded-2">Data 2018</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold text-danger">System is under development</p>
                   </div>
