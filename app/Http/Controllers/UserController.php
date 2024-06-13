@@ -10,7 +10,7 @@ use Yajra\DataTables\Facades\DataTables;
 class UserController extends Controller
 {
     public function data2018(Request $request){
-        $data = MabaModel::where('created_at', 'LIKE', '2018%');
+        $data = MabaModel::where('tahun', '2018');
         if ($request->ajax()) {
             return DataTables::of($data)
                     ->addIndexColumn()
